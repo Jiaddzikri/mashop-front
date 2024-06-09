@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 
 const SellerLayout = () => {
   return (
-    <div>
-      <Outlett />
+    <div className="relative">
+      <Outlet />
     </div>
   )
 }
