@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import NavbarMenu from "./NavbarMenu";
+import UserMenu from "./UserMenu";
 
 const GuestNavbar = () => {
   const [is_menu_active, set_menu_active] = useState(false);
 
   return (
-    <nav className="w-full h-12 fixed top-0 border-b border-gray-300 px-4 md:px-12 lg:px-52 py-10 z-40 flex justify-center items-center">
+    <nav className="w-full h-12 bg-white fixed top-0 border-b border-gray-300 px-4 md:px-12 lg:px-36 py-10 z-40 flex justify-center items-center">
       <a className="hidden md:block" href="/">
         <img className="w-16" src="/mashop-logo.png" />
       </a>
@@ -48,7 +48,7 @@ const GuestNavbar = () => {
           <span className={`w-6 h-[2px] bg-gray-500 rounded-xl`}></span>
         </button>
       </div>
-      <NavbarMenu set_menu_active={set_menu_active} is_menu_active={is_menu_active} />
+      <UserMenu is_menu_active={is_menu_active} set_menu_active={set_menu_active}/>
     </nav>
   );
 };
