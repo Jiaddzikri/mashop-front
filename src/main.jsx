@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <UserLayout />,
     children: [
       {
-        path: "https://mashops.vercel.app/",
+        path: "/",
         element: <Home />,
       },
     ],
@@ -24,7 +24,6 @@ const router = createBrowserRouter([
     element: <SellerLayout />,
   },
   {
-    path: "https://mashops.vercel.app/accounts",
     element: <AuthLayout />,
     children: [
       {
