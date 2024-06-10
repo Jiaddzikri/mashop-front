@@ -24,14 +24,15 @@ const router = createBrowserRouter([
     element: <SellerLayout />,
   },
   {
+    path: "/accounts",
     element: <AuthLayout />,
     children: [
       {
-        path: "/accounts/signin",
+        path: "signin",
         element: <Signin />,
       },
       {
-        path: "/accounts/login",
+        path: "login",
         element: <Login />,
       },
     ],
