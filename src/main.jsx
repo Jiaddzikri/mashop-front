@@ -8,6 +8,7 @@ import Signin from "./views/accounts/Signin";
 import Login from "./views/accounts/Login";
 import Home from "./views/Home";
 import UserLayout from "./components/layouts/UserLayout";
+import Show from "./views/Show";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/:seller/:product",
+        element: <Show />
+      }
     ],
   },
   {
