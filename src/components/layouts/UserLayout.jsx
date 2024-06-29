@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
 import GuestNavbar from "../navbars/GuestNavbar";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const UserLayout = () => {
   return (
-    <div>
-      <GuestNavbar />
+    <div className="relative">
+      <Header />
       <Outlet />
+      <Footer />
     </div>
   )
 }
