@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element : <Search />
       },
       {
-        path : "/checkout",
+        path : "/checkout/:product",
         element: <Checkout />
       },
       {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <SellerLayout />,
   },
   {
-    path: "/accounts",
+    path: "/users",
     element: <AuthLayout />,
     children: [
       {

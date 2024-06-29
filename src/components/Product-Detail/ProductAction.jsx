@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const ProductAction = () => {
+const ProductAction = ({ slug,price }) => {
   const [is_buy_container_active, set_buy_container_active] = useState(false),
     [count, set_count] = useState(1);
   let stock = 5;
@@ -48,14 +48,14 @@ const ProductAction = () => {
         </div>
         <div className="flex justify-between mt-4 text-lg">
           <span>Total</span>
-          <span className="font-semibold">Rp32.000.000</span>
+          <span className="font-semibold">{price}</span>
         </div>
         <div className="mt-4 flex flex-col gap-3">
           <button className="px-4 py-2 border border-blue-500 font-semibold text-blue-500 rounded-lg">
             Tambah Keranjang
           </button>
           <button className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg">
-            Beli
+            <a href={`/checkout/${slug}`}>Beli</a>
           </button>
         </div>
       </div>
@@ -67,28 +67,34 @@ const ProductAction = () => {
           >
             p
           </button>
-
           <button
             type="button"
             className="w-[40%] px-2 py-1 col-span-2 rounded-full border-[1px] border-blue-500 text-blue-500 h-10 "
           >
             + Keranjang
           </button>
-          <button
-            onClick={() => set_buy_container_active((prev) => !prev)}
-            type="button"
-            className="w-[40%] rounded-full border-[1px] bg-blue-500 text-white h-10"
-          >
-            Beli
-          </button>
+          <a href={`/checkout/${slug}`}>
+            <button
+              onClick={() => set_buy_container_active((prev) => !prev)}
+              type="button"
+              className="w-[40%] rounded-full border-[1px] bg-blue-500 text-white h-10"
+            >
+              Beli
+            </button>
+          </a>
+          k
         </div>
         <div
-          className={`fixed ${is_buy_container_active ? "top-[100vh] translate-y-[-100vh]" : ""}  w-screen h-screen z-40 bg-[#0000005c] transition delay-150`}
+          className={`fixed ${
+            is_buy_container_active ? "top-[100vh] translate-y-[-100vh]" : ""
+          }  w-screen h-screen z-40 bg-[#0000005c] transition delay-150`}
         >
           <div className="relative w-full h-full">
-            <div className={`absolute translate-x-[${
-            is_buy_container_active ? "0" : "100%"
-          }] w-full bottom-0 bg-white rounded-tl-2xl rounded-tr-2xl p-5 pb-12`}>
+            <div
+              className={`absolute translate-x-[${
+                is_buy_container_active ? "0" : "100%"
+              }] w-full bottom-0 bg-white rounded-tl-2xl rounded-tr-2xl p-5 pb-12`}
+            >
               <div className="block lg:hidden relative">
                 <button
                   onClick={() => set_buy_container_active((prev) => !prev)}

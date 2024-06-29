@@ -1,15 +1,15 @@
-const ProductCard = () => {
+const ProductCard = ({url, product}) => {
   return (
-    <a href="">
-      <div className="relative bg-white mx-auto overflow-hidden sm:w-[180px] md:w-[250px] lg:w-[190px] 2xl:w-[220px] md:border md:border-gray-300 rounded-xl transition hover:shadow-md">
+    <a href={`${url}`}>
+      <div className="relative bg-white mx-auto overflow-hidden sm:w-[180px] md:w-[250px] lg:w-[190px] 2xl:w-[220px] md:border md:border-gray-300 rounded-xl transition hover:shadow-md mb-5">
         <img
           className="w-full"
-          src="/images/product-3.avif"
+          src={`${product.thumbnail}`}
           alt="product-thumbnail"
         />
         <div className="px-2 sm:px-2 py-2 sm:py-4">
-          <div className="text-sm line-clamp-2">Legion pro</div>
-          <div className="text-sm sm:text-lg font-[500]">Rp32.000.000</div>
+          <div className="text-sm line-clamp-2">{product.name}</div>
+          <div className="text-sm sm:text-lg font-[500]">{product.price}</div>
           <div className="flex gap-1 text-sm text-gray-500">
             <svg
               className="w-4 fill-current text-blue-500"
