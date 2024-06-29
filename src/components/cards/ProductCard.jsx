@@ -1,25 +1,25 @@
 const ProductCard = () => {
   return (
     <a href="">
-      <div className="border-none md:border-gray-500 md:border-[1px] rounded-xl">
+      <div className="relative bg-white mx-auto overflow-hidden sm:w-[180px] md:w-[250px] lg:w-[190px] 2xl:w-[220px] md:border md:border-gray-300 rounded-xl transition hover:shadow-md">
         <img
-          className="w-[150px] md:w-[200px] mx-auto"
-          src="/images/product-1.webp"
-          alt=""
+          className="w-full"
+          src="/images/product-3.avif"
+          alt="product-thumbnail"
         />
-        <div className="sm:px-4 py-2 sm:py-4">
-          <div className="text-sm">Legion pro</div>
-          <div className="mt-2 font-semibold">Rp32.000.000</div>
-          <div className="mt-2 flex gap-1 text-sm text-gray-500">
+        <div className="px-2 sm:px-2 py-2 sm:py-4">
+          <div className="text-sm line-clamp-2">Legion pro</div>
+          <div className="text-sm sm:text-lg font-[500]">Rp32.000.000</div>
+          <div className="flex gap-1 text-sm text-gray-500">
             <svg
               className="w-4 fill-current text-blue-500"
               fill="#000000"
               version="1.1"
               id="Capa_1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 511 511"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
               <g>
                 <path
@@ -58,9 +58,9 @@ const ProductCard = () => {
               <svg
                 className="w-4"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 47.94 47.94"
-                xml:space="preserve"
+                xmlSpace="preserve"
               >
                 <path
                   style={{ fill: "#ED8A19" }}
@@ -75,7 +75,7 @@ const ProductCard = () => {
             </span>
             <span className="ml-1">4.9</span>
             <span className="mx-1">|</span>
-            <span>Terjual 250+</span>
+            <span className="text-sm">Terjual 250+</span>
           </div>
         </div>
       </div>

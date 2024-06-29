@@ -30,12 +30,16 @@ const GuestNavbar = () => {
         </span>
         <span>|</span>
         <div className="flex gap-4 text-sm">
-          <button className="flex items-center w-24 justify-center border-[3px] border-blue-500 rounded-2xl bg-transparent text-blue-500 px-6 py-1">
-            Masuk
-          </button>
-          <button className="w-24 flex items-center justify-center bg-blue-500 text-white rounded-2xl px-6 py-1">
-            Daftar
-          </button>
+          <a href="/accounts/login">
+            <button className="flex items-center w-24 justify-center border-[3px] border-blue-500 rounded-2xl bg-transparent text-blue-500 px-6 py-1">
+              Masuk
+            </button>
+          </a>
+          <a href="/accounts/signin">
+            <button className="w-24 flex items-center justify-center bg-blue-500 text-white rounded-2xl px-6 py-1 border-[3px] border-blue-500">
+              Daftar
+            </button>
+          </a>
         </div>
       </div>
       <div
@@ -48,7 +52,10 @@ const GuestNavbar = () => {
           <span className={`w-6 h-[2px] bg-gray-500 rounded-xl`}></span>
         </button>
       </div>
-      <UserMenu is_menu_active={is_menu_active} set_menu_active={set_menu_active}/>
+      <UserMenu
+        is_menu_active={is_menu_active}
+        set_menu_active={set_menu_active}
+      />
     </nav>
   );
 };

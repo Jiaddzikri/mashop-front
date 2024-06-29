@@ -9,6 +9,9 @@ import Login from "./views/accounts/Login";
 import Home from "./views/Home";
 import UserLayout from "./components/layouts/UserLayout";
 import Show from "./views/Show";
+import Search from "./views/Search";
+import Checkout from "./views/Checkout";
+import Payment from "./views/Payment";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
       {
         path: "/:seller/:product",
         element: <Show />
+      },
+      {
+        path : "/search",
+        element : <Search />
+      },
+      {
+        path : "/checkout",
+        element: <Checkout />
+      },
+      {
+        path : "/payment",
+        element: <Payment />
       }
     ],
   },
