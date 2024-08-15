@@ -112,7 +112,7 @@ const Login = () => {
         </button>
         <span className="text-center text-gray-500 mt-3">
           Belum punya akun?{" "}
-          <a href="/accounts/signin" className="font-semibold text-blue-500">
+          <a href="/users/signin" className="font-semibold text-blue-500">
             Daftar
           </a>
         </span>

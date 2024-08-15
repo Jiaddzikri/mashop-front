@@ -1,24 +1,27 @@
-const Information = () => {
+import { useParams } from "react-router-dom";
+import { Products } from "../../constant/Products";
+
+const Information = ({_product}) => {
   return (
     <div className="col-span-3 md:col-span-2 border border-gray-300 rounded-lg">
       <div className="relative flex flex-col sm:flex-row gap-5 items-center py-4 px-4">
         <div className="relative w-[150px]">
           <img
             className="w-full border border-gray-300 rounded-lg"
-            src="/images/product-3.avif"
+            src={_product.thumbnail}
             alt=""
           />
         </div>
         <div className="flex flex-col font-[500]">
           <h2 className="text-xl text-gray-700 line-clamp-2">
-            Iphone 15 pro max 12/256
+            {_product.name}
           </h2>
           <span className="text-sm text-gray-500">Toko : jiadstore</span>
           <span className="text-sm text-gray-500">Jumlah : 1</span>
         </div>
         <div className="mx-auto">
           <span className="font-semibold text-blue-500 text-2xl">
-            Rp18.000.000
+            {_product.price}
           </span>
         </div>
       </div>

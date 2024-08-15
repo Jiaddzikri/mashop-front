@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ProductCard from "../cards/ProductCard";
+import { Products } from "../../constant/Products";
 
 const ProductSearch = () => {
   const [filter_button_expand, set_filter_button_expand] = useState(false);
@@ -11,7 +12,7 @@ const ProductSearch = () => {
       <div className="w-full 2xl:px-8 xl:border xl:border-gray-300 rounded-lg">
         <div className="xl:px-4 my-5 lg:flex lg:justify-between lg:items-center">
           <div className="px-2 2xl:px-0">
-            <span className="text-sm text-gray-500">Hasil untuk pencarian <a href="" className="text-blue-500 font-[500]">Iphone</a> : 12 hasil.</span>
+            <span className="text-sm text-gray-500">Hasil untuk pencarian <a href="" className="text-blue-500 font-[500]">Iphone</a> : {Products.length} hasil.</span>
           </div>
           <div onClick={(() => set_filter_button_expand((prev) => !prev))} className="relative hidden lg:flex lg:justify-start lg:gap-3 lg:items-center w-[250px] bg-gray-100 py-3 px-6 rounded-lg hover:bg-gray-200 transition cursor-pointer">
             <svg
@@ -70,13 +71,9 @@ const ProductSearch = () => {
           </div>
         </div>
         <div className="grid gap-2 lg:gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:px-4">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {Products.map((product, index) => (
+            <ProductCard product={product} url={`${product.store}/${index}`} />
+          ))}
         </div>
       </div>
     </div>

@@ -2,15 +2,13 @@
 
 import { useState } from "react";
 
-const ProductDescription = () => {
+const ProductDescription = ({name, price, description,store, store_image}) => {
   const [is_desc_expand, set_desc_expand] = useState(false);
   return (
     <div className="col-span-3 lg:col-span-2 xl:col-span-1 mx-auto px-3 lg:px-0">
       <div className="flex flex-col">
         <h1 className="order-2 lg:order-1 text-md lg:text-xl font-semibold mt-3 sm:mt-0">
-          Lenovo Legion Slim 5 16IRH8 82YA008KID Gaming Notebook - Storm Grey (
-          i7-13700H / 2x 8GB (16GB) / 512GB SSD / RTX4060 / 16" WQXGA IPS /
-          Win11 / OHS )
+          {name}
         </h1>
         <div className="order-3 xl:order-2 mt-2 flex items-center text-sm text-gray-500">
           <span>
@@ -37,7 +35,7 @@ const ProductDescription = () => {
           <span>Terjual 250+</span>
         </div>
         <div className="order-1 xl:order-3">
-          <h3 className="text-3xl font-semibold mt-0 xl:mt-2">Rp32.000.000</h3>
+          <h3 className="text-3xl font-semibold mt-0 xl:mt-2">{price}</h3>
         </div>
       </div>
       <div className="mt-10 ">
@@ -53,18 +51,7 @@ const ProductDescription = () => {
           } text-sm h-max overflow-hidden`}
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-            quod repellat voluptatum reiciendis temporibus, beatae recusandae
-            facilis? Officia ducimus iusto, ipsum eius natus ipsa quas magnam
-            quod non id quaerat laborum quidem. Cupiditate, corrupti? Rem,
-            accusamus? Aspernatur aliquam repellendus quidem illum tenetur
-            dolorum, praesentium unde possimus consectetur odit perspiciatis ex!
-            Cupiditate perferendis quas adipisci labore omnis ex odio minima sed
-            atque nostrum. Soluta possimus labore quasi qui at consectetur
-            perferendis facere corporis cupiditate! Labore sunt eveniet maiores
-            nisi. Illum possimus assumenda id rerum fugit nesciunt obcaecati
-            excepturi optio officia placeat? Velit, repellendus rem! Dicta,
-            debitis iste sed a delectus eos?
+            {description}
           </p>
         </div>
         <button
@@ -79,11 +66,11 @@ const ProductDescription = () => {
         <div className="flex gap-3 items-center relative">
           <img
             className="w-14 rounded-full border border-gray-300"
-            src="/images/product-1.webp"
+            src={store_image}
             alt="seller-picture"
           />
           <div className="flex flex-col items-start">
-            <h2 className="text-md font-semibold">Jiadstore</h2>
+            <h2 className="text-md font-semibold">{store}</h2>
             <span className="text-sm text-gray-500">Online 7 jam lalu</span>
           </div>
           <button className="absolute right-3 font-semibold text-blue-500 text-sm mt-1">
