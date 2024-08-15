@@ -112,7 +112,7 @@ const Signin = () => {
           </p>
         </div>
         <button onClick={submit} className="mt-6 w-32 mx-auto text-white font-semibold bg-blue-500 py-3 rounded-full hover:bg-blue-600 delay-75 transition">Daftar</button>
-        <span className="text-center text-gray-500 mt-3">Sudah punya akun? <a href="/accounts/login" className="font-semibold text-blue-500">Masuk</a></span>
+        <span className="text-center text-gray-500 mt-3">Sudah punya akun? <a href="/users/login" className="font-semibold text-blue-500">Masuk</a></span>
       </div>
     </div>
   );

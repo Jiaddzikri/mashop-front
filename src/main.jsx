@@ -12,6 +12,10 @@ import Show from "./views/Show";
 import Search from "./views/Search";
 import Checkout from "./views/Checkout";
 import Payment from "./views/Payment";
+import Dashboard from "./views/seller/Dashboard";
+import Products from "./views/seller/products/ProductLists";
+import ProductLists from "./views/seller/products/ProductLists";
+import AddProduct from "./views/seller/products/AddProduct";
 
 const router = createBrowserRouter([
   {
@@ -39,9 +43,22 @@ const router = createBrowserRouter([
       }
     ],
   },
-  {
-    path: "seller",
+  { 
     element: <SellerLayout />,
+    children: [
+      {
+        path: "/seller/dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "/seller/product/lists",
+        element: <ProductLists />
+      },
+      {
+        path: "/seller/product/add",
+        element: <AddProduct />
+      }
+    ]
   },
   {
     path: "/users",

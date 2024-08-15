@@ -1,4 +1,4 @@
-const Payment = ({price}) => {
+const Payment = ({handlePayment, price}) => {
   return (
     <div className="h-max col-span-3 md:col-span-1 rounded-lg px-5 py-3 border border-gray-300 text-gray-500">
       <h2 className="font-semibold text-lg">Detail Pembayaran</h2>
@@ -16,7 +16,7 @@ const Payment = ({price}) => {
           <span>Rp100.000</span>
         </li>
       </ul>
-      <button className="w-full bg-blue-500 rounded-lg px-3 py-2 transition hover:bg-blue-600 text-white mt-5">
+      <button onClick={handlePayment} className="w-full bg-blue-500 rounded-lg px-3 py-2 transition hover:bg-blue-600 text-white mt-5">
         Bayar Sekarang
       </button>
     </div>
